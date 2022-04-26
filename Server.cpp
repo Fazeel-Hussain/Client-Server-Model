@@ -57,7 +57,7 @@ int main()
 		char RxBuffer[128] = {};
 		int cmp = 1;
 
-		while (cmp != 0) { //i addded this
+		while (cmp != 0) { 
 			recv(ConnectionSocket, RxBuffer, sizeof(RxBuffer), 0);
 			cmp = strcmp(RxBuffer, "quit");
 			cout << "Msg Rx: " << RxBuffer << endl;

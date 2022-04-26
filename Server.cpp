@@ -37,13 +37,6 @@ int main()
 		WSACleanup();
 		return 0;
 	}
-
-
-	
-
-	// build the loop arround this
-	// need to figure out the connectionSocket loop
-	// 
 	
 	int terminator = 0;
 	do {
@@ -78,9 +71,9 @@ int main()
 
 
 	
-	//closesocket(ConnectionSocket);	//closes incoming socket
-	//closesocket(ServerSocket);	    //closes server socket	
-	//WSACleanup();					//frees Winsock resources
+	closesocket(ConnectionSocket);	//closes incoming socket
+	closesocket(ServerSocket);	//closes server socket	
+	WSACleanup();			//frees Winsock resources
 
 	return 1;
 }
